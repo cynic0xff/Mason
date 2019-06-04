@@ -38,5 +38,4 @@ export class ApiService {
       return of(result as T);
     };
   }
-
 }
