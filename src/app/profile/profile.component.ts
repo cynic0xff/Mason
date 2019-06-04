@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from '../model/profile';
 import { ApiService } from '../services/api.service';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-profile',
