@@ -18,12 +18,15 @@ import {
   MatToolbarModule
  } from '@angular/material';
 import { NavComponent } from './nav/nav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { NavComponent } from './nav/nav.component';
     MatCardModule,
     MatFormFieldModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
