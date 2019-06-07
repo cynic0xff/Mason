@@ -15,18 +15,21 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
-  MatToolbarModule
+  MatToolbarModule,
  } from '@angular/material';
+ import {MatChipsModule} from '@angular/material/chips';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { LodgeProfileComponent } from './lodge-profile/lodge-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    LodgeProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatFormFieldModule,
     HttpClientModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
