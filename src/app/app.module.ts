@@ -16,6 +16,7 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatToolbarModule,
+  MatBadgeModule
  } from '@angular/material';
  import {MatChipsModule} from '@angular/material/chips';
 import { NavComponent } from './nav/nav.component';
@@ -46,7 +47,8 @@ import { LodgeProfileComponent } from './lodge-profile/lodge-profile.component';
     HttpClientModule,
     MatToolbarModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

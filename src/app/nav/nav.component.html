@@ -1,9 +1,16 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-     <h1>mason</h1>
-     <span class="spacer"></span>
-    <span class="fill-space"></span>
-     <a mat-button routerLink="/register">Register</a>
-     <a mat-button routerLink="/login">Login</a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<nav>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>mason</h1>
+      <span class="spacer"></span>
+      <span class="fill-space"></span>
+      <a mat-button routerLink="/register">Register</a>
+      <a mat-button routerLink="/login">Login</a>
+      <div class="profile-img">
+        <mat-icon matBadge="8" matBadgePosition="above before" matBadgeColor="warn">
+          <a href="#"><img src="/assets/images/profile.jpg" alt="profile" class="profile-img rounded-circle"></a>
+        </mat-icon>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
