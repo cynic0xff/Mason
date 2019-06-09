@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+
 import { 
   MatInputModule,
   MatPaginatorModule,
@@ -16,9 +19,12 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatToolbarModule,
-  MatBadgeModule
+  MatBadgeModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatTabsModule
  } from '@angular/material';
- import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -52,7 +58,12 @@ import { TemplateComponent } from './template/template.component';
     MatToolbarModule,
     MatGridListModule,
     MatChipsModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatOptionModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
