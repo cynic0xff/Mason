@@ -23,6 +23,7 @@ import { NavComponent } from './nav/nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LodgeProfileComponent } from './lodge-profile/lodge-profile.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LodgeProfileComponent } from './lodge-profile/lodge-profile.component';
     ProfileComponent,
     NavComponent,
     DashboardComponent,
-    LodgeProfileComponent
+    LodgeProfileComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
