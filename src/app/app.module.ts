@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { 
@@ -22,7 +22,8 @@ import {
   MatBadgeModule,
   MatOptionModule,
   MatSelectModule,
-  MatTabsModule
+  MatTabsModule,
+  MatAutocompleteModule
  } from '@angular/material';
 import { MatChipsModule } from '@angular/material/chips';
 import { NavComponent } from './nav/nav.component';
@@ -63,7 +64,9 @@ import { TemplateComponent } from './template/template.component';
     MatSelectModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatAutocompleteModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
