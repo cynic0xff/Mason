@@ -1,55 +1,64 @@
-  <div class="wrapper">
+    <div class="wrapper">
       <app-side-nav></app-side-nav>
       <div class="main-panel">
         <div class="content">
           <div class="container-fluid">
-            <div class="row border">
-              <div class="col-sm-12"><h3>Profile</h3></div>
-              <div class="col-sm-12">
-                  <mat-form-field class="example-full-width">
-                      <input matInput placeholder="First name" value="Scott">
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
+            <div class="row borderX">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="profile-img-lg text-left">
+                        <mat-icon matBadge="8" matBadgePosition="above before" matBadgeColor="warn" matBadgeSize="large">
+                            <a href="#"><img src="/assets/images/profile.jpg" alt="profile" class="rounded-circle"></a>
+                          </mat-icon>
+                      </div>
+                      <p class="card-category">update details</p>
+                      <h3 class="card-title">User Profile</h3>
+                    </div>
+                    <div class="col-sm-12 pt-5">
+                      <mat-form-field class="w-50 pr-5">
+                        <input matInput placeholder="First name" value="Scott">
+                      </mat-form-field>
+                      <mat-form-field class="w-50">
                         <input matInput placeholder="Last name" value="Wren">
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field class="w-50 pr-5">
                         <input matInput placeholder="Email" value="scott@redhat.com">
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
+                      </mat-form-field>
+                      <mat-form-field class="w-50">
                         <input matInput placeholder="Phone" value="555-555-5555">
-                    </mat-form-field>
-              </div> 
-              <div class="col-sm-12"><br></div>
-              <div class="col-sm-12">
-                  <mat-tab-group>
-                      <mat-tab label="Entered Apprentice Date"> <strong>6/7/2018</strong> - Pheonix Lodge 364, Sarasota, FL. 
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH0CmVwLlxkQ4NMksUYWmU-UlxLDdOn9QMduPe7GcVHnjCLqsDeA" style="height: 6rem"></mat-tab>
-                      <mat-tab label="Fellow Craft Date"> <strong>6/7/2019</strong> - Venice Lodge, Venice, FL. <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH0CmVwLlxkQ4NMksUYWmU-UlxLDdOn9QMduPe7GcVHnjCLqsDeA" style="height: 6rem"></mat-tab>
-                      <mat-tab label="Master Mason Date"> Awaiting date</mat-tab>
-                    </mat-tab-group>
-              </div>
-              <div class="col-sm-12"><hr></div>
-              <div class="col-sm-12">
-                  <mat-form-field>
-                      <mat-label>Lodge Membership</mat-label>
-                      <mat-select [formControl]="toppings" multiple>
-                        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width">
-                          <input matInput placeholder="Lodge Officer" aria-label="Lodge Officer" [matAutocomplete]="auto" [formControl]="stateCtrl">
-                          <mat-autocomplete #auto="matAutocomplete">
-                            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-                              <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
-                              <span>{{state.name}}</span> |
-                              <small>Population: {{state.population}}</small>
-                            </mat-option>
-                          </mat-autocomplete>
+                      </mat-form-field>
+                      <br>
+                        <mat-form-field class="w-50 pr-5">
+                          <input matInput placeholder="EA Date" value="1/1/2019">
                         </mat-form-field>
-                      </form>  
+                        <mat-form-field class="w-50">
+                          <input matInput placeholder="FC Date" value="1/1/2019">
+                        </mat-form-field>
+                        <mat-form-field class="w-50 pr-5">
+                          <input matInput placeholder="MM Date" value="1/1/2019">
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="w-50 pr-5">
+                          <mat-label>Lodge Membership</mat-label>
+                          <mat-select [formControl]="memberships" multiple>
+                            <mat-option *ngFor="let membership of lodgeMemberships" [value]="membership">{{membership}}</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="w-50 pr-5">
+                            <form class="example-form">
+                                  <input matInput placeholder="Lodge Officer" aria-label="Lodge Officer" [matAutocomplete]="auto" [formControl]="stateCtrl">
+                                  <mat-autocomplete #auto="matAutocomplete">
+                                    <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                                      <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
+                                      <span>{{state.name}}</span> |
+                                      <small>Population: {{state.population}}</small>
+                                    </mat-option>
+                                  </mat-autocomplete>
+                              </form> 
+                        </mat-form-field>
+                    </div>
               </div>
-          </div> 
         </div>
       </div>
     </div>

@@ -49,8 +49,8 @@ export class ProfileComponent implements OnInit {
   ];
 
 
-  toppings = new FormControl();
-  toppingList: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge', 'Cambridge Lodge', 'London Lodge', 'Edinbugh Lodge'];
+memberships = new FormControl();
+lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge', 'Cambridge Lodge', 'London Lodge', 'Edinbugh Lodge'];
 
   data: Profile[] = [];
   isLoading = true;
