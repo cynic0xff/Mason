@@ -1,11 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-/*html, body {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-}*/
-
 .profile-img {
     height: 4rem;
     width: auto;
@@ -22,4 +17,8 @@
 
 .sub-heading {
     font-size: 1.5rem;
+}
+
+.btn-save {
+    font-size: 1.1rem;
 }

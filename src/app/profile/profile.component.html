@@ -3,7 +3,7 @@
       <div class="main-panel">
         <div class="content">
           <div class="container-fluid">
-            <div class="row borderX">
+            <div class="row">
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                       <div class="profile-img-lg text-left">
@@ -28,7 +28,7 @@
                       <mat-form-field class="w-50">
                         <input matInput placeholder="Phone" value="555-555-5555">
                       </mat-form-field>
-                      <div class="pt-2"></div>
+                      <div class="pt-3"></div>
                       <p class="sub-heading">Degree details</p>
                         <mat-form-field class="w-50 pr-5">
                           <input matInput placeholder="EA Date" value="1/1/2019">
@@ -46,7 +46,7 @@
                             <mat-option *ngFor="let membership of lodgeMemberships" [value]="membership">{{membership}}</mat-option>
                           </mat-select>
                         </mat-form-field>
-                        <mat-form-field class="w-50 pr-5">
+                        <mat-form-field class="w-50">
                             <form class="example-form">
                                   <input matInput placeholder="Lodge Officer" aria-label="Lodge Officer" [matAutocomplete]="auto" [formControl]="stateCtrl">
                                   <mat-autocomplete #auto="matAutocomplete">
@@ -58,9 +58,14 @@
                                   </mat-autocomplete>
                               </form> 
                         </mat-form-field>
+                        <div class="pt-4"></div>
+                        <button mat-flat-button color="primary" class="w-100 btn-save" (click)="save()">Save</button>
+                        <div class="pt-4"></div>
                     </div>
               </div>
         </div>
       </div>
     </div>
   </div>
+
+  
