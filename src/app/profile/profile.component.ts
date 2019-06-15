@@ -26,14 +26,12 @@ export class ProfileComponent implements OnInit {
     {
       name: 'Worshipful Master',
       position: 'WM',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
-      flag: 'https://www.picclickimg.com/d/l400/pict/401751435105_/MASONIC-BLUE-LODGE-OFFICER-WORSHIPFUL-MASTER-APRON-And.jpg'
+      flag: '/assets/images/worshipful_master.png'
     },
     {
       name: 'Senior Deacon',
       position: 'SD',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+      flag: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Junior Decon',
@@ -91,7 +89,10 @@ export class ProfileComponent implements OnInit {
 
 
 memberships = new FormControl();
+
+//TODO: Make an array
 lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge', 'Cambridge Lodge', 'London Lodge', 'Edinbugh Lodge'];
+
 
   data: Profile[] = [];
   isLoading = true;
