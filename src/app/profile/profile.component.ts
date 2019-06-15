@@ -5,7 +5,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
-export interface State {
+export interface LodgePositions {
   flag: string;
   name: string;
   position: string;
@@ -19,7 +19,7 @@ export interface State {
 export class ProfileComponent implements OnInit {
 
   stateCtrl = new FormControl();
-  filteredStates: Observable<State[]>;
+  filteredStates: Observable<LodgePositions[]>;
 
   /*
   Worshipful Master (WM)
@@ -35,7 +35,7 @@ Secretary (S)
 Treasurer (T)
 Marshal (M)
 */
-  states: State[] = [
+  lodgePositions: LodgePositions[] = [
     {
       name: 'Worshipful Master',
       position: 'WM',
@@ -116,14 +116,14 @@ lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge'
     this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(state => state ? this._filterStates(state) : this.states.slice())
+        map(state => state ? this._filterStates(state) : this.lodgePositions.slice())
       );
   }
 
-  private _filterStates(value: string): State[] {
+  private _filterStates(value: string): LodgePositions[] {
     const filterValue = value.toLowerCase();
 
-    return this.states.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
+    return this.lodgePositions.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
   getErrorMessage() {
@@ -141,5 +141,4 @@ lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge'
       this.isLoading = false;
     });
   }
-
 }
