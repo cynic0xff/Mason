@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export interface State {
   flag: string;
   name: string;
-  population: string;
+  position: string;
 }
 
 @Component({
@@ -21,29 +21,83 @@ export class ProfileComponent implements OnInit {
   stateCtrl = new FormControl();
   filteredStates: Observable<State[]>;
 
+  /*
+  Worshipful Master (WM)
+Senior Deacon (SD)
+Junior Deacon (JD)
+Chaplain (C)
+Senior Warden (SW)
+Junior Warden (JW)
+Senior Steward (SS)
+Junior Steward (JS)
+Tyler (T)
+Secretary (S)
+Treasurer (T)
+Marshal (M)
+*/
   states: State[] = [
     {
       name: 'Worshipful Master',
-      population: 'WM',
+      position: 'WM',
       // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
       flag: 'https://www.picclickimg.com/d/l400/pict/401751435105_/MASONIC-BLUE-LODGE-OFFICER-WORSHIPFUL-MASTER-APRON-And.jpg'
     },
     {
       name: 'Senior Deacon',
-      population: 'SD',
+      position: 'SD',
       // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
       flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
     },
     {
-      name: 'Florida',
-      population: '20.27M',
+      name: 'Junior Decon',
+      position: 'JD',
       // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
       flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
     },
     {
-      name: 'Texas',
-      population: '27.47M',
+      name: 'Chaplain',
+      position: 'C',
       // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Senior Warden',
+      position: 'SW',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Junior Warden',
+      position: 'JW',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Senior Steward',
+      position: 'SS',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Junior Steward',
+      position: 'JS',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Tyler',
+      position: 'T',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Secretary',
+      position: 'S',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Treasurer',
+      position: 'T',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+    },
+    {
+      name: 'Marshall',
+      position: 'M',
       flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
     }
   ];
