@@ -7,14 +7,14 @@
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                       <div class="profile-img-lg text-left">
-                        <mat-icon matBadge="8" matBadgePosition="above before" matBadgeColor="warn" matBadgeSize="large">
+                        <mat-icon matBadge="8" matBadgePosition="above after" matBadgeColor="warn" matBadgeSize="medium">
                             <a href="#"><img src="/assets/images/profile.jpg" alt="profile" class="rounded-circle"></a>
                           </mat-icon>
                       </div>
-                      <p class="card-category">update details</p>
-                      <h3 class="card-title">User Profile</h3>
                     </div>
+                    <div><h3 class="card-title text-left pt-5 pl-3">User Profile</h3></div>
                     <div class="col-sm-12 pt-5">
+                        <p class="sub-heading">Contact details</p>
                       <mat-form-field class="w-50 pr-5">
                         <input matInput placeholder="First name" value="Scott">
                       </mat-form-field>
@@ -28,7 +28,8 @@
                       <mat-form-field class="w-50">
                         <input matInput placeholder="Phone" value="555-555-5555">
                       </mat-form-field>
-                      <br>
+                      <div class="pt-2"></div>
+                      <p class="sub-heading">Degree details</p>
                         <mat-form-field class="w-50 pr-5">
                           <input matInput placeholder="EA Date" value="1/1/2019">
                         </mat-form-field>
@@ -38,7 +39,7 @@
                         <mat-form-field class="w-50 pr-5">
                           <input matInput placeholder="MM Date" value="1/1/2019">
                         </mat-form-field>
-                        <br>
+                        <p class="sub-heading pt-4">Lodge details</p>
                         <mat-form-field class="w-50 pr-5">
                           <mat-label>Lodge Membership</mat-label>
                           <mat-select [formControl]="memberships" multiple>
