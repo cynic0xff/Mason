@@ -18,23 +18,10 @@ export interface LodgePositions {
 })
 export class ProfileComponent implements OnInit {
 
+  //TODO: Read lodge positions from mongo
   stateCtrl = new FormControl();
   filteredStates: Observable<LodgePositions[]>;
 
-  /*
-  Worshipful Master (WM)
-Senior Deacon (SD)
-Junior Deacon (JD)
-Chaplain (C)
-Senior Warden (SW)
-Junior Warden (JW)
-Senior Steward (SS)
-Junior Steward (JS)
-Tyler (T)
-Secretary (S)
-Treasurer (T)
-Marshal (M)
-*/
   lodgePositions: LodgePositions[] = [
     {
       name: 'Worshipful Master',
