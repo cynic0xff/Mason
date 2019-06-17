@@ -6,7 +6,7 @@ import { map, startWith } from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
 export interface LodgePositions {
-  flag: string;
+  icon: string;
   name: string;
   position: string;
 }
@@ -26,64 +26,62 @@ export class ProfileComponent implements OnInit {
     {
       name: 'Worshipful Master',
       position: 'WM',
-      flag: '/assets/images/worshipful_master.png'
+      icon: '/assets/images/worshipful_master.png'
     },
     {
       name: 'Senior Deacon',
       position: 'SD',
-      flag: '/assets/images/senior_deacon.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Junior Decon',
       position: 'JD',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Chaplain',
       position: 'C',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Senior Warden',
       position: 'SW',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Junior Warden',
       position: 'JW',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Senior Steward',
       position: 'SS',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Junior Steward',
       position: 'JS',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Tyler',
       position: 'T',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Secretary',
       position: 'S',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Treasurer',
       position: 'T',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     },
     {
       name: 'Marshall',
       position: 'M',
-      flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+      icon: '/assets/images/senior_deacon.svg'
     }
   ];
 
