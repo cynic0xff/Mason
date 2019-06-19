@@ -102,11 +102,11 @@ lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge'
     this.filteredLodgePositions = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(position => position ? this._filterStates(position) : this.lodgePositions.slice())
+        map(position => position ? this._filteredLodgePositions(position) : this.lodgePositions.slice())
       );
   }
 
-  private _filterStates(value: string): LodgePositions[] {
+  private _filteredLodgePositions(value: string): LodgePositions[] {
     const filterValue = value.toLowerCase();
 
     return this.lodgePositions.filter(position => position.name.toLowerCase().indexOf(filterValue) === 0);
