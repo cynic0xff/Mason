@@ -88,7 +88,7 @@ export class ProfileComponent implements OnInit {
 
 memberships = new FormControl();
 
-//TODO: Make an array
+//TODO: Make an array that is pulled from a database
 lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge', 'Cambridge Lodge', 'London Lodge', 'Edinbugh Lodge'];
 
 
@@ -102,14 +102,14 @@ lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge'
     this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(state => state ? this._filterStates(state) : this.lodgePositions.slice())
+        map(position => position ? this._filterStates(position) : this.lodgePositions.slice())
       );
   }
 
   private _filterStates(value: string): LodgePositions[] {
     const filterValue = value.toLowerCase();
 
-    return this.lodgePositions.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
+    return this.lodgePositions.filter(position => position.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
   getErrorMessage() {
