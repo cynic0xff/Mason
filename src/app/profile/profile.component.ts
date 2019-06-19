@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
 
   //TODO: Read lodge positions from mongo
   stateCtrl = new FormControl();
-  filteredLodgePositions: Observable<LodgePositions[]>;
+  filteredStates: Observable<LodgePositions[]>;
 
   lodgePositions: LodgePositions[] = [
     {
@@ -99,14 +99,14 @@ lodgeMemberships: string[] = ['Phoenix Lodge 346', 'Venice Lodge', 'Miami Lodge'
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.filteredLodgePositions = this.stateCtrl.valueChanges
+    this.filteredStates = this.stateCtrl.valueChanges
       .pipe(
         startWith(''),
-        map(position => position ? this._filteredLodgePositions(position) : this.lodgePositions.slice())
+        map(position => position ? this._filterStates(position) : this.lodgePositions.slice())
       );
   }
 
-  private _filteredLodgePositions(value: string): LodgePositions[] {
+  private _filterStates(value: string): LodgePositions[] {
     const filterValue = value.toLowerCase();
 
     return this.lodgePositions.filter(position => position.name.toLowerCase().indexOf(filterValue) === 0);
